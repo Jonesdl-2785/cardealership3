@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="car dealer">
+  <meta name="author" content="Diane L. Jones">
+  <!-- Title -->
+  <title>Voss Dealership Inventory</title>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse" id="main-navbar" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Voss Family of Dealerships</a>
+      </div><!-- end navbar-header -->
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <form class="navbar-form navbar-left">
+  <div class="form-group">
+    <input type="text" id="cars" class="form-control" placeholder="  Search">
+      <button class="btn btn-default" type="submit">
+        <i class="glyphicon glyphicon-search"></i></button>
+  </div>
+</form>
+</div>
+</nav>
+
+  <div class="container">
+    <h2>Inventory</h2>
+    <div class="row">
+      <div class="col-md-2">
+        <a href="images/Jaguar F-Type.jpg" class="thumbnail">
+                        <img src="images/Jaguar F-Type.jpg" class="img-thumbnail" alt="Jaguar F-Type">
+                        <div class="caption">
+                            <p><small>JAGUAR <br>Duis eu porta mauris. Sed facilisis nec tellus.</small></p>
+                        </div>
+                    </a>
+        <button type="button" id='jaguar' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[1])'>Jaguar</button>
+      </div>
+      <div class="col-md-2">
+        <a href="images/cadillac xt5.jpg" class="thumbnail">
+                    <img src="images/cadillac xt5.jpg" class="img-thumbnail" alt="Cadillac XT5">
+                    <div class="caption">
+                        <p><small>CADILLAC <br>Lorem ipsm facilisis nibh enim, eget volutpat.</small></p></div>
+                </a>
+        <button type="button" id='cadillac' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[2])'>Cadillac</button>
+      </div>
+      <div class="col-md-2">
+        <a href="images/MB AMG GLA.jpg" class="thumbnail">
+                    <img src="images/MB AMG GLA.jpeg" class="img-thumbnail" alt="Mercedes Benz">
+                    <div class="caption">
+                        <p><small>MERCEDES BENZ<br>Ipsum glod facilisis nibh enim, eget volutpat.</small></p></div>
+                </a>
+        <button type="button" id='mercedes' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[3])'>Mercedes Benz</button>
+      </div>
+      <div class="col-md-2">
+        <a href="images/2018-BMW-2-Series-Convertible-image.jpg" class="thumbnail">
+                    <img src="images/2018-BMW-2-Series-Convertible-image.jpg" class="img-thumbnail" alt="BMW">
+                    <div class="caption">
+                        <p><small>BMW<br>Lorem tincidunt libero sit amet sodales temp.</small></p></div>
+                </a>
+        <button type="button" id='bmw' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[4])'>BMW</button>
+      </div>
+      <div class="col-md-2">
+        <a href="images/Bentley-Continental-GT-2018-top-image-853616.jpg" class="thumbnail">
+                    <img src="images/Bentley-Continental-GT-2018-top-image-853616.jpg" class="img-thumbnail" alt="Bentley">
+                    <div class="caption">
+                        <p><small>BENTLEY<br>Vestibulum facilisis nibh enim, eget volutpat.</small></p></div>
+                </a>
+        <button type="button" id='bentley' class="btn btn-primary btn-xs" role="button" onclick='calculateTax(carInv[5])'>Bentley</button>
+      </div>
+      <div class="col-md-2">
+        <a href="images/tesla-model-s.jpg" class="thumbnail">
+                    <img src="images/tesla-model-s.jpg" class="img-thumbnail" alt="Tesla Model S">
+                    <div class="caption">
+                        <p><small>TESLA<br>Aliquam tincidunt libero sit amet sodales.</small></p></div>
+                </a>
+        <button type="button" id='tesla' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[6])'>Tesla</button>
+      </div>
+    </div>
+  </div>
+
+  <table id="carTable" class="table table-hover" border="2">
+    <thead>
+      <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>Price</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody id="cdbody">
+      <tr>
+        <td class="make"></td>
+        <td class="model"></td>
+        <td class="year"></td>
+        <td class="color"></td>
+        <td class="price dollars"></td>
+        <td id="tPrice1"></td>
+      </tr>
+
+      <tr>
+        <td class="make"></td>
+        <td class="model"></td>
+        <td class="year"></td>
+        <td class="color"></td>
+        <td class="price dollars"></td>
+        <td id="tPrice2"></td>
+      </tr>
+
+      <tr>
+        <td class="make"></td>
+        <td class="model"></td>
+        <td class="year"></td>
+        <td class="color"></td>
+        <td class="price dollars"></td>
+        <td id="tPrice3" value=""></td>
+      </tr>
+
+      <tr>
+        <td class="make"></td>
+        <td class="model"></td>
+        <td class="year"></td>
+        <td class="color"></td>
+        <td class="price dollars"></td>
+        <td id="tPrice4"></td>
+      </tr>
+
+      <tr>
+        <td class="make"></td>
+        <td class="model"></td>
+        <td class="year"></td>
+        <td class="color"></td>
+        <td class="price dollars"></td>
+        <td id="tPrice5"></td>
+      </tr>
+
+      <tr>
+        <td class="make"></td>
+        <td class="model"></td>
+        <td class="year"></td>
+        <td class="color"></td>
+        <td class="price dollars"></td>
+        <td id="tPrice6"></td>
+      </tr>
+
+    </tbody>
+  </table>
+  <br>
+
+  <div class="container">
+    <!-- Gallery -->
+    <section>
+      <div class="page-header" id="section-gallery">
+        <h2>Gallery. <small>Current Inventory</small></h2>
+      </div>
+
+      <div class="carousel slide" id="gallery-carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#gallery-carousel" data-slide-to="1"></li>
+          <li data-target="#gallery-carousel" data-slide-to="2"></li>
+          <li data-target="#gallery-carousel" data-slide-to="3"></li>
+          <li data-target="#gallery-carousel" data-slide-to="4"></li>
+          <li data-target="#gallery-carousel" data-slide-to="5"></li>
+          <!-- <li data-target="#gallery-carousel" data-slide-to="6"></li> -->
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/2018-BMW-2-Series-Convertible-image.jpg" alt="Slider image" images="">
+            <div class="carousel-caption">
+              <strong>BMW </strong><br><br> FINALLY, THE REBELS HAVE A CAUSE. Pulse-racing performance. Extraordinarily agile handling. A rich sports car heritage. The BMW 2 Series is all heart – and pure BMW. Get behind the wheel of a coupe or convertible,
+              and let your emotions run free. Model Shown: BMW 2 Series Starting MSRP at $34,800</div>
+          </div>
+          <div class="item">
+            <img src="images/2018_mercedes-benz_gla-class_4dr-suv_amg-gla-45-4matic_fq_oem_6_1280.jpg" alt="Slider image" images="">
+            <div class="carousel-caption"><strong>Mercedes Benz</strong>
+              <br> <br> AMG GLA 45 SUV. New wheels range from 18 to 20 inches. Every line is strong yet refined, true to the character within. And with torque-vectoring all-wheel drive and a chassis full of motorsports-derived AMG hardware, it'll rally
+              your spirits and make your heart race. Model Shown: AMG GLA45 Starting MSRP at $50,600</div>
+          </div>
+          <div class="item">
+            <img src="images/block_9.png" alt="Slider image" images="">
+            <div class="carousel-caption"><strong>Cadillac</strong><br> <br> 2018 XT5 CROSSOVER. Versatility, reinvented. The XT5 crossover was crafted to help you outsmart whatever task you have at hand. Its generously sized interior is filled with advanced features to help keep
+              you safe and connected, while the chiselled exterior lines make a striking statement. Model Shown: XT5 Crossover Starting MSRP at $39,395</div>
+          </div>
+          <div class="item">
+            <img src="images/2018-Jaguar-F-Type-red-front-close.jpg" alt="Slider image" images="">
+            <div class="carousel-caption"><strong>Jaguar</strong><br> <br> 2018 F‑TYPE range offers sports cars that only Jaguar could create - effortless performance and precise agile handling, with everyday refinement and usability. F‑TYPE now features a 296hp turbocharged 2.0‑Liter
+              4‑cylinder Ingenium engine, the most advanced and efficient engine ever found in an F‑TYPE. Model Show: F-Type Starting MSRP at $59,900</div>
+          </div>
+          <div class="item">
+            <img src="images/85283_2018_tesla_Model_S.jpg" alt="Slider image" images="">
+            <div class="carousel-caption"><strong>Tesla</strong><br> <br> 2018 Model S is designed from the ground up to be the safest, most exhilarating sedan on the road. With unparalleled performance delivered through Tesla's unique, all-electric powertrain, Model S accelerates
+              from 0 to 60 mph in as little as 2.5 seconds. Model S is equipped with Autopilot capabilities. Model Shown: Model S Starting MSRP at $88,350</div>
+          </div>
+          <div class="item">
+            <img src="images/Bentley-Continental-GT-2018-top-image-853616.jpg" alt="Slider image" images="">
+            <div class="carousel-caption"><strong>Bentley</strong><br> <br> The world of grand touring has changed. Enter the new Continental GT. With its sleek lines carving a sharp path through the air, this phenomenal car heralds a new era of unrivalled power, exquisite craftsmanship
+              and cutting-edge automotive technology. Model Shown: Model S Starting MSRP at $201,225</div>
+          </div>
+
+        </div>
+
+        <a href="#gallery-carousel" class="left carousel-control" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+        <a href="#gallery-carousel" class="right carousel-control" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+      </div>
+    </section>
+</div>
+    <!-- external js -->
+    <script src="js/cars.js"></script>
+         <footer class="footer">
+           <ul>
+            <li><a href="https://www.facebook.com/dlj.co27" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/Co27Diane" target="_blank">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/diane-jones-21a0037/" target="_blank">LinkedIn</a></li>
+            <li class="copyright"><small><em><a href="mailto:dlj.co27@gmail.com" id="mailto">&#169 Diane L. Jones 2017</a></em><small></li>
+           </ul>
+         </footer>
+
+
+
+</body>
+
+</html>

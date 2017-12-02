@@ -1,0 +1,489 @@
+/******************************************************
+
+GENERAL STYLE ELEMENTS
+
+*******************************************************/
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url(fonts/Roboto-Medium-webfont.ttf);
+}
+
+@font-face {
+    font-family: RobotoLight;
+    src: url(fonts/Roboto-Light-webfont.ttf);
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url(fonts/Roboto-Bold-webfont.ttf);
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(fonts/Roboto-Regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: OswaldBold;
+    src: url(fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: RobotoSlabBold;
+    src: url(fonts/RobotSlab-Bold.ttf);
+}
+
+@font-face {
+  font-family: RobotoSlabLight;
+  src: url(fonts/RobotSlab-Light.ttf);
+}
+@font-face {
+  font-family: RobotoSlabThin;
+  src: url(fonts/RobotSlab-Thin.ttf);
+}
+@font-face {
+    font-family: Wisdom;
+    src: url(fonts/wisdom.otf);
+}
+@font-face {
+    font-family: Wisdom;
+    src: url(fonts/wisdom.otf);
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab');
+
+a {
+   outline: 0 !important;
+}
+
+/* Fonts */
+/*This defines Semantic Elements as blocks for older browsers  */
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+/******************************************************
+
+MEDIA
+
+*******************************************************/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body { line-height: 1.4 }
+}
+
+/******************************************************
+
+HEADER
+
+*******************************************************/
+
+body {
+	background-color: #d4dce8;
+  font-family: 'RobotoRegular', sans-serif;
+  src: url(fonts/Roboto-Regular.ttf);
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'RobotoSlabBold', sans-serif;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-family: 'RobotoBold', sans-serif;
+  font-size: 2em;
+}
+
+p {
+  font-size: 18px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+    /*background-color: rgb(55, 65, 66);*/
+    min-height: 720px;
+    /*margin-top: 70px;*/
+    /*background: url("/Users/ThedWord/Desktop/cardealership/images/hero_Jaguar F_Type.jpg") no-repeat scroll;*/
+    background-size: 100% 100%;*/
+
+}
+
+header h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: inherit;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+  /* Navigation bar styles start */
+div.container-fluid {
+
+}
+nav {
+      height: 51px;
+      width: 100%;
+      margin-bottom: 0;
+      /*margin-top: 1px;*/
+      padding-left: 5px;
+  }
+
+  .navbar {
+    margin-bottom: 0 !important;
+  }
+  .navbar-form {
+    padding: 10px 15px;
+    margin-top: 2px;
+  }
+  nav ul {
+      list-style: none;
+      padding: 0px auto;
+  }
+  nav ul li {
+      display: inline-block;
+  }
+  nav ul li > a {
+      text-decoration:none;
+  }
+  nav ul li > a:hover {
+      text-decoration:underline;
+  }
+
+  nav#main-navbar.navbar.navbar-inverse {
+      border-radius: none;
+  }
+  .navlink {
+      height: 45px;
+      margin-right: 10px;
+      font-size: 18px;
+      float: left;
+      padding-left:5px;
+      padding-right:5px;
+      padding-top: 12px;
+      color: white;
+      text-decoration: none;
+  }
+  .navlink.active {
+      color: red;
+      background-color: white;
+  }
+
+  div.form-group-nav {
+    width: 300px;
+    height: 25px;
+  }
+
+  input[type=text] {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 1px;
+  }
+  input.form-control {
+    height: 50;
+    width: auto;
+  }
+
+  input#cars.form-control {
+    padding-left: 1px;
+    margin: 0px;
+  }
+
+  button.btn.btn-default {
+    height: 50;
+    width: auto;
+  }
+  /* Navigation bar styles end */
+
+/* Video/Media-Heaven */
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color:   #d4dce8;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #d4dce8;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    /*background: rgba(0, 0, 0, 0);*/
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+.filter h1{
+  z-index: 1;
+  /*position: absolute;*/
+  font-family: 'RobotoSlabBold', serif;
+  text-align: center;
+  color: #fff;
+
+}
+
+.filter p {
+  text-align: center;
+  color: skyblue;
+  font-size: 1.5em;
+}
+
+.filter #mainjumbo {
+  text-align: center;
+}
+
+
+main {
+  /* Give the main content container a solid background color to hide the fixed position video */
+  background: #d4dce8;
+  padding: 2em;
+}
+
+/* About */
+.container-a {
+  width: 100%;
+  height: 100vh;
+  background-color: #d4dce8;
+}
+div#about.content {
+    overflow: hidden;
+    width: inherit;
+  }
+
+.content {
+  padding: 0px 10px 0px 10px;
+}
+.container-a p {
+    color: #080845;
+    width: auto;
+    height: 100%;
+    display: block;
+    font-family: 'RobotoLight', Verdana, sans-serif;
+}
+
+
+  #about p {
+    text-transform: capitalize;
+    margin-left: auto;
+    padding: 0 25px 0 25px;
+    text-align: justify;
+}
+
+#about h1 p {
+  color: #080845;
+}
+  /* Inventory */
+  .thumbnail {
+    height: 100%;
+    width: 200px;
+}
+
+.thumbnail img {
+    max-height: 100%;
+    max-width: 100%;
+    border: 1px solid rgb(54, 50, 50);
+}
+
+div.col-md-2 {
+  padding-bottom: 5px;
+
+}
+
+
+
+ul.footer_social {
+    list-style: outside none none;
+    margin-left: 0;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+ul.footer_social li {
+    float: left;
+    height: 45px;
+    margin-right: 10px;
+    width: 45px;
+}
+
+p.copyright {
+    color: #97a0a7;
+    float: right;
+    font-family: RobotoRegular,Arial;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+.copyright {
+  float: right;
+}
+
+a.go_top {
+    color: #ffffff;
+    float: right;
+    font-family: RobotoRegular,Arial;
+    font-size: 13px;
+    height: 42px;
+    margin-left: 15px;
+    margin-top: 18px;
+    width: 42px;
+}
+
+p.copyright a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+p.copyright a:hover {
+    color: #777777;
+}
+
+/* images */
+a.thumbnail {
+margin: inherit;
+}
+a.thumbnail img {
+    width: 330px;
+    height: 130px;
+}
+button.btn.btn-primary.btn-xs {
+  border: 1px solid #d4dce8;
+}
+
+div.item img {
+    width: 1168px;
+    height: 1836px;
+
+}
+
+/* inventory table */
+.dollars::before {
+    content: "$";
+}
+
+/* contact page */
+.formContainer {
+    width: 100%;
+    height: 100vh;
+    border-radius: none;
+    background-color: #d4dce8;
+    padding: 2px;
+}
+
+.formContainer h2 {
+  text-align: center;
+  font-family: 'RobotoBold', sans-serif;
+  font-size: 2em;
+}
+
+form.form-horizontal {
+  width: 95%;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfce9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 0;
+    resize: vertical;
+}
+
+textarea.form-control {
+    height: auto;
+    width: 81%;
+    padding-left: 15px;
+}
+
+textarea#comment.form-control {
+margin: auto;
+}
+button.btn btn-default input[type=submit] {
+    background-color: rgb(26, 57, 26);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn btn-default input[type=submit]:hover {
+    background-color: #190369;
+}
+
+button.btn btn-default {
+    background-color:rgb(26, 57, 26);
+}
+
+/* footer */
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'RobotoMedium', sans-serif;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #000;
+}
+
+footer li {
+    float: left;
+}
+
+footer li a {
+    display: block;
+    color: #c0c0c0;
+    text-align: center;
+    padding: 2px 6px;
+    text-decoration: none;
+}
+
+footer li a:hover {
+    background-color: rgb(51, 102, 255);
+}
